@@ -15,6 +15,8 @@
 		31D3F55B19D9795200CF6B56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D3F55919D9795200CF6B56 /* LaunchScreen.xib */; };
 		31D3F56719D9795200CF6B56 /* MesaniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3F56619D9795200CF6B56 /* MesaniusTests.swift */; };
 		AF50951219D988D2007EEE1A /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50951119D988D2007EEE1A /* Dish.swift */; };
+		AF7F8F6819D9D581006B6466 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F8F6719D9D581006B6466 /* Menu.swift */; };
+		AF7F8F6A19D9D5DA006B6466 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		31D3F56519D9795200CF6B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D3F56619D9795200CF6B56 /* MesaniusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesaniusTests.swift; sourceTree = "<group>"; };
 		AF50951119D988D2007EEE1A /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		AF7F8F6719D9D581006B6466 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = ../Menu.swift; sourceTree = "<group>"; };
+		AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONHelper.swift; path = ../JSONHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,9 @@
 				31D3F54E19D9795200CF6B56 /* AppDelegate.swift */,
 				31D3F55019D9795200CF6B56 /* FirstViewController.swift */,
 				AF50951119D988D2007EEE1A /* Dish.swift */,
+				AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */,
 				31D3F55219D9795200CF6B56 /* SecondViewController.swift */,
+				AF7F8F6719D9D581006B6466 /* Menu.swift */,
 				31D3F55419D9795200CF6B56 /* Main.storyboard */,
 				31D3F55719D9795200CF6B56 /* Images.xcassets */,
 				31D3F55919D9795200CF6B56 /* LaunchScreen.xib */,
@@ -221,7 +227,9 @@
 				31D3F55319D9795200CF6B56 /* SecondViewController.swift in Sources */,
 				AF50951219D988D2007EEE1A /* Dish.swift in Sources */,
 				31D3F54F19D9795200CF6B56 /* AppDelegate.swift in Sources */,
+				AF7F8F6A19D9D5DA006B6466 /* JSONHelper.swift in Sources */,
 				31D3F55119D9795200CF6B56 /* FirstViewController.swift in Sources */,
+				AF7F8F6819D9D581006B6466 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

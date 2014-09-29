@@ -13,6 +13,10 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(Menu().getMenuList())
+        
+        
+        /*
         let urlPath = "http://localhost:8080/rest/menu/"
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
@@ -25,7 +29,9 @@ class FirstViewController: UIViewController {
                 println(jsonResult)
                 
                 if let dict = jsonResult as? NSArray {
+        
                     for food : AnyObject in dict {
+        
                         if let foodInfo = food as? Dictionary<String, AnyObject> {
                             let id : AnyObject = foodInfo["id"]!
                             let name : AnyObject = foodInfo["name"]!
@@ -48,6 +54,10 @@ class FirstViewController: UIViewController {
         })
         
         task.resume()
+        */
+        
+        
+        
     
     }
 
