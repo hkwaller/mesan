@@ -20,6 +20,8 @@ class Dish {
         self.id = id
         self.name = name
         self.price = price
-        
+        self.description = description
     }
+    
+    
 }
