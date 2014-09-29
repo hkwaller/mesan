@@ -10,7 +10,7 @@ import Foundation
 
 class JSONHelper{
     
-    func getMenu() -> [Dish]{
+    func getMenu(comletionHandler: (list: NSArray) -> () ){
     
         var menuList = [Dish]()
         
@@ -37,20 +37,18 @@ class JSONHelper{
                             let id = foodInfo["id"]! as Int
                             let name = foodInfo["name"]! as String
                             let price = foodInfo["price"]! as Int
-                            
                             menuList.append(Dish(id: id, name: name, price: price))
-                        
+                            comletionHandler(list: menuList)
                         }
                     }
                 }
+                
+                
             }
             
         })
         
-        
         task.resume()
-        
-        return menuList
         
     }
     
