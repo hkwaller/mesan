@@ -13,8 +13,9 @@ class Dish {
     var id: Int
     var name: String
     var price: Int
+    var description: String
     
-    init(id: Int, name: String, price: Int){
+    init(id: Int, name: String, price: Int, description: String){
     
         self.id = id
         self.name = name
