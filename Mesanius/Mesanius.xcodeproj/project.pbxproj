@@ -14,6 +14,7 @@
 		31D3F55819D9795200CF6B56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D3F55719D9795200CF6B56 /* Images.xcassets */; };
 		31D3F55B19D9795200CF6B56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D3F55919D9795200CF6B56 /* LaunchScreen.xib */; };
 		31D3F56719D9795200CF6B56 /* MesaniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3F56619D9795200CF6B56 /* MesaniusTests.swift */; };
+		AF50951219D988D2007EEE1A /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50951119D988D2007EEE1A /* Dish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		31D3F56019D9795200CF6B56 /* MesaniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MesaniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D3F56519D9795200CF6B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D3F56619D9795200CF6B56 /* MesaniusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesaniusTests.swift; sourceTree = "<group>"; };
+		AF50951119D988D2007EEE1A /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				31D3F54E19D9795200CF6B56 /* AppDelegate.swift */,
 				31D3F55019D9795200CF6B56 /* FirstViewController.swift */,
+				AF50951119D988D2007EEE1A /* Dish.swift */,
 				31D3F55219D9795200CF6B56 /* SecondViewController.swift */,
 				31D3F55419D9795200CF6B56 /* Main.storyboard */,
 				31D3F55719D9795200CF6B56 /* Images.xcassets */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31D3F55319D9795200CF6B56 /* SecondViewController.swift in Sources */,
+				AF50951219D988D2007EEE1A /* Dish.swift in Sources */,
 				31D3F54F19D9795200CF6B56 /* AppDelegate.swift in Sources */,
 				31D3F55119D9795200CF6B56 /* FirstViewController.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				31D3F56C19D9795200CF6B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31D3F56D19D9795200CF6B56 /* Build configuration list for PBXNativeTarget "MesaniusTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				31D3F56F19D9795200CF6B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
