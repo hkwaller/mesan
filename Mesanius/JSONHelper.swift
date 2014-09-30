@@ -10,7 +10,7 @@ import Foundation
 
 class JSONHelper{
     
-    func getMenu(comletionHandler: (list: NSArray) -> () ){
+     func fetchMenu(completionHandler: (callback: [Dish]) -> ()) {
     
         var menuList = [Dish]()
         
@@ -21,7 +21,7 @@ class JSONHelper{
         let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
             
             if (error != nil) {
-                
+                completionHandler(callback: menuList)
                 println(error)
             } else {
                 
@@ -34,16 +34,18 @@ class JSONHelper{
                         
                         if let foodInfo = food as? Dictionary<String, AnyObject> {
                             
-                            let id = foodInfo["id"]! as Int
-                            let name = foodInfo["name"]! as String
-                            let price = foodInfo["price"]! as Int
-                            menuList.append(Dish(id: id, name: name, price: price))
-                            comletionHandler(list: menuList)
+                            if let id = foodInfo["id"] as AnyObject? as Int?{
+                                if let name = foodInfo["name"] as AnyObject? as String?{
+                                    if let price = foodInfo["price"] as AnyObject? as Int? {
+                                        menuList.append(Dish(id: id, name: name, price: price))
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                
-                
+                // Send callback with menuList
+                completionHandler(callback: menuList)
             }
             
         })
