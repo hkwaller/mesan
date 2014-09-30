@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class Menu {
     
-    private var menuList = [Dish]()
+    var menuList = [Dish]()
     
     init(){
         
@@ -24,9 +25,10 @@ class Menu {
         }
     }
     
-    func getMenuList() -> [Dish]{
+    func getMenuList(tableView: UITableView) -> [Dish]{
         
         return self.menuList
+        
     }
     
     
