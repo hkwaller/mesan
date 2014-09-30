@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H3p-Mc-0oN">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H3p-Mc-0oN">
+                                <rect key="frame" x="0.0" y="28" width="600" height="523"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="MenuCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="T6y-Mr-G4p" detailTextLabel="hHj-Nb-Ngn" style="IBUITableViewCellStyleSubtitle" id="psM-0k-Q96">
@@ -43,28 +43,38 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-Kc-GOy">
-                                <rect key="frame" x="277" y="285" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="3JE-NB-sWX"/>
-                                    <constraint firstAttribute="width" constant="44" id="Wm4-3G-c0R"/>
-                                </constraints>
-                                <state key="normal" title="Ny">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="juQ-Kc-GOy" secondAttribute="trailing" constant="20" id="12K-Ci-5fo"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="juQ-Kc-GOy" secondAttribute="bottom" constant="20" id="8LC-P4-eze"/>
+                            <constraint firstAttribute="trailing" secondItem="H3p-Mc-0oN" secondAttribute="trailing" id="5Au-4g-Dbn"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="7T5-te-rLY"/>
+                            <constraint firstAttribute="trailing" secondItem="H3p-Mc-0oN" secondAttribute="trailing" id="BKK-I6-cgY"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="I8c-fS-chi"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="H3p-Mc-0oN" secondAttribute="bottom" id="Ikm-OJ-4DD"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="16" id="UeP-in-Tkp"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="boT-UQ-p6V"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="kba-tU-O6C"/>
+                            <constraint firstItem="H3p-Mc-0oN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ktk-OW-gSZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H3p-Mc-0oN" secondAttribute="trailing" constant="16" id="pRb-th-gmv"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="H3p-Mc-0oN" secondAttribute="bottom" id="ynn-v8-w5E"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Au-4g-Dbn"/>
+                                <exclude reference="I8c-fS-chi"/>
+                                <exclude reference="UeP-in-Tkp"/>
+                                <exclude reference="boT-UQ-p6V"/>
+                                <exclude reference="ktk-OW-gSZ"/>
+                                <exclude reference="pRb-th-gmv"/>
+                                <exclude reference="ynn-v8-w5E"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bestillinger" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="738" y="-322"/>
         </scene>
         <!--Meny-->
         <scene sceneID="wg7-f3-ORb">
@@ -78,8 +88,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HMI-7J-Y1r">
-                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HMI-7J-Y1r">
+                                <rect key="frame" x="0.0" y="28" width="600" height="523"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" textLabel="h8G-cB-Jsj" detailTextLabel="Xw9-o8-pfc" style="IBUITableViewCellStyleSubtitle" id="EIw-KS-pF0">
@@ -106,6 +116,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="HMI-7J-Y1r" secondAttribute="bottom" id="KB5-05-F9E"/>
+                            <constraint firstItem="HMI-7J-Y1r" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="LwS-Be-NVG"/>
+                            <constraint firstItem="HMI-7J-Y1r" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Y8i-gH-f5c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HMI-7J-Y1r" secondAttribute="trailing" constant="-16" id="hmg-jj-yn5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Meny" image="second" id="cPa-gy-q4n"/>
                     <connections>
@@ -114,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="744" y="364"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

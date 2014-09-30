@@ -40,6 +40,8 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         var cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "MenuCell") as UITableViewCell
         
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         cell.textLabel?.text = self.menuList[indexPath.row].name
         var subtitileText = String(self.menuList[indexPath.row].price) + " kr"
         cell.detailTextLabel?.text = subtitileText
