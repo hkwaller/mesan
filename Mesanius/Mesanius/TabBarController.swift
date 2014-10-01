@@ -11,6 +11,7 @@ import UIKit
 class TabBarController: UITabBarController {
     
     var menuList:[Dish] = [Dish]()
+    var orderList:[Order] = [Order]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,14 @@ class TabBarController: UITabBarController {
             for dish in self.menuList {
                 println("dish id: \(dish.id) name: \(dish.name) price: \(dish.price)")
                 
+            }
+        }
+        
+        JSONHelper().fetchOrders { (callback) -> () in
+            self.orderList = callback
+            println("Found \(self.orderList.count) orders: ")
+            for order in self.orderList {
+                println("order id: \(order.orderId) items: \(order.item)")
             }
         }
         // Do any additional setup after loading the view.

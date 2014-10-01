@@ -14,6 +14,7 @@
 		31D3F55819D9795200CF6B56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D3F55719D9795200CF6B56 /* Images.xcassets */; };
 		31D3F55B19D9795200CF6B56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D3F55919D9795200CF6B56 /* LaunchScreen.xib */; };
 		31D3F56719D9795200CF6B56 /* MesaniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3F56619D9795200CF6B56 /* MesaniusTests.swift */; };
+		31F4A84E19DBFF7F00820194 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F4A84D19DBFF7F00820194 /* Order.swift */; };
 		AF0BA62E19DAC66000DC1D9A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0BA62D19DAC66000DC1D9A /* TabBarController.swift */; };
 		AF50951219D988D2007EEE1A /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF50951119D988D2007EEE1A /* Dish.swift */; };
 		AF7F8F6A19D9D5DA006B6466 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */; };
@@ -41,6 +42,7 @@
 		31D3F56019D9795200CF6B56 /* MesaniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MesaniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D3F56519D9795200CF6B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D3F56619D9795200CF6B56 /* MesaniusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesaniusTests.swift; sourceTree = "<group>"; };
+		31F4A84D19DBFF7F00820194 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		AF0BA62D19DAC66000DC1D9A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AF50951119D988D2007EEE1A /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONHelper.swift; path = ../JSONHelper.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				31D3F54E19D9795200CF6B56 /* AppDelegate.swift */,
 				31D3F55019D9795200CF6B56 /* FirstViewController.swift */,
 				AF50951119D988D2007EEE1A /* Dish.swift */,
+				31F4A84D19DBFF7F00820194 /* Order.swift */,
 				AF7F8F6919D9D5DA006B6466 /* JSONHelper.swift */,
 				31D3F55219D9795200CF6B56 /* SecondViewController.swift */,
 				31D3F55419D9795200CF6B56 /* Main.storyboard */,
@@ -231,6 +234,7 @@
 				AF7F8F6A19D9D5DA006B6466 /* JSONHelper.swift in Sources */,
 				AF0BA62E19DAC66000DC1D9A /* TabBarController.swift in Sources */,
 				31D3F55119D9795200CF6B56 /* FirstViewController.swift in Sources */,
+				31F4A84E19DBFF7F00820194 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

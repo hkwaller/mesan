@@ -93,4 +93,47 @@ class JSONHelper{
     
     
     }
+    
+    func fetchOrders(completionHandler: (callback: [Order]) -> ()) {
+        
+        var orderList = [Order]()
+        
+        let urlPath = "http://localhost:8080/rest/order/"
+        let url = NSURL(string: urlPath)
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+            
+            if (error != nil) {
+                completionHandler(callback: orderList)
+                println(error)
+            } else {
+                
+                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                if let dict = jsonResult as? NSArray {
+                    
+                    for order : AnyObject in dict {
+                        if let orderInfo = order as? Dictionary<String, AnyObject> {
+                            if let orderId = orderInfo["orderId"] as AnyObject? as Int?{
+                                if let item: AnyObject = orderInfo["item"] as AnyObject? as AnyObject?{
+                                    var itemId:Int = item["item"] as Int
+                                    var quantity:Int = item["quantity"] as Int
+                                    orderList.append(Order(orderId: orderId, itemId: itemId, quantity: quantity))
+                                }
+                            }
+                        }
+                    }
+                }
+                //Sort list with ascending id's
+                orderList.sort({$0.orderId < $1.orderId})
+                // Send callback with menuList
+                completionHandler(callback: orderList)
+            }
+            
+        })
+        
+        task.resume()
+        
+    }
+
 }
