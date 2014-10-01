@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
 
     @IBOutlet weak var menuTableView: UITableView!
     var menuList:[Dish] = [Dish]()
@@ -19,6 +19,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         self.menuTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MenuCell")
         self.menuTableView.dataSource = self
+        self.menuTableView.delegate = self
         
         var tBBControler: TabBarController = self.tabBarController as TabBarController
         self.menuList = tBBControler.menuList
@@ -47,6 +48,18 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         cell.detailTextLabel?.text = subtitileText
         
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        println("Decriptopn for dish nr: \(indexPath.row+1)")
+        
+        JSONHelper().fetchDescription(indexPath.row+1, dish: menuList[indexPath.row], completionHandler: { (callback) -> () in
+            
+            println("Dish object: \(self.menuList[indexPath.row].description)")
+            
+        })
         
     }
 

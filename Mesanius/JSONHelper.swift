@@ -44,6 +44,8 @@ class JSONHelper{
                         }
                     }
                 }
+                //Sort list with ascending id's
+                menuList.sort({$0.id < $1.id})
                 // Send callback with menuList
                 completionHandler(callback: menuList)
             }
@@ -54,7 +56,40 @@ class JSONHelper{
         
     }
     
-    func getDescription(){
+    func fetchDescription(id: Int,dish: Dish ,completionHandler: (callback: String) -> ()) {
+        
+        let urlPath = "http://localhost:8080/rest/menu/" + String(id)
+        let url = NSURL(string: urlPath)
+        let session = NSURLSession.sharedSession()
+        
+        var description:String = ""
+        
+        let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+            
+            if (error != nil) {
+                description = "error getting description"
+                completionHandler(callback: description)
+                println(error)
+            } else {
+                
+                let jsonResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                //println(jsonResult)
+                
+               if let foodInfo = jsonResult as? Dictionary<String, AnyObject> {
+                    
+                    if let desc = foodInfo["description"] as AnyObject? as String?{
+                       description = desc
+                        dish.description = description
+                    }
+                   
+                }
+                // Send callback with menuList
+                completionHandler(callback: description)
+            }
+            
+        })
+        
+        task.resume()
     
     
     }
