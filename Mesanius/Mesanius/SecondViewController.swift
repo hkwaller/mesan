@@ -17,13 +17,19 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         super.viewDidLoad()
         
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.menuTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MenuCell")
         self.menuTableView.dataSource = self
         self.menuTableView.delegate = self
         
         var tBBControler: TabBarController = self.tabBarController as TabBarController
         self.menuList = tBBControler.menuList
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,7 +47,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         var cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "MenuCell") as UITableViewCell
         
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell.accessoryType = UITableViewCellAccessoryType.DetailButton
         
         cell.textLabel?.text = self.menuList[indexPath.row].name
         var subtitileText = String(self.menuList[indexPath.row].price) + " kr"
@@ -53,11 +59,16 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+
+    }
+    
+    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        
         println("Decriptopn for dish nr: \(indexPath.row+1)")
         
-        JSONHelper().fetchDescription(indexPath.row+1, dish: menuList[indexPath.row], completionHandler: { (callback) -> () in
+        JSONHelper().fetchDescription(menuList[indexPath.row], completionHandler: { (callback) -> () in
             
-            println("Dish object: \(self.menuList[indexPath.row].description)")
+            println("Dish object: \(callback.description)")
             
         })
         

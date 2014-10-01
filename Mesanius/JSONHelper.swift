@@ -56,9 +56,9 @@ class JSONHelper{
         
     }
     
-    func fetchDescription(id: Int,dish: Dish ,completionHandler: (callback: String) -> ()) {
+    func fetchDescription(dish: Dish ,completionHandler: (callback: Dish) -> ()) {
         
-        let urlPath = "http://localhost:8080/rest/menu/" + String(id)
+        let urlPath = "http://localhost:8080/rest/menu/" + String(dish.id)
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         
@@ -68,7 +68,7 @@ class JSONHelper{
             
             if (error != nil) {
                 description = "error getting description"
-                completionHandler(callback: description)
+                completionHandler(callback: dish)
                 println(error)
             } else {
                 
@@ -78,13 +78,13 @@ class JSONHelper{
                if let foodInfo = jsonResult as? Dictionary<String, AnyObject> {
                     
                     if let desc = foodInfo["description"] as AnyObject? as String?{
-                       description = desc
+                        description = desc
                         dish.description = description
                     }
                    
                 }
                 // Send callback with menuList
-                completionHandler(callback: description)
+                completionHandler(callback: dish)
             }
             
         })
